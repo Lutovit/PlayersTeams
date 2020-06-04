@@ -1,0 +1,29 @@
+﻿<Window x:Class="app_6_1.Teams"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:app_6_1"
+        mc:Ignorable="d"
+        Title="Teams" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="300*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="TeamDataGrid" Margin="10" Grid.ColumnSpan="3" Grid.RowSpan="2" MouseDoubleClick="TeamDataGrid_MouseDoubleClick" SelectionChanged="TeamDataGrid_SelectionChanged" CanUserAddRows="False"/>
+        <Button x:Name="Add_Team_Button" Content="Add team" Margin="10,5" Grid.Row="2" Click="Add_Team_Button_Click"/>
+        <Button x:Name="DeliteTeam_Button" Content="Delite team" Grid.Column="1" Margin="10,5" Grid.Row="2" RenderTransformOrigin="5.048,0.602" Click="DeliteTeam_Button_Click"/>
+        <Button x:Name="Exit_Button" Content="Exite" Grid.Column="3" Margin="10,5" Grid.Row="2" Click="Exit_Button_Click"/>
+        <Label Content="Состав команды:" Grid.Column="3" Margin="10,5"/>
+        <ListBox x:Name="TeamListBox" Grid.Column="3" Margin="10,10,25,15" Grid.Row="1"/>
+
+    </Grid>
+</Window>
